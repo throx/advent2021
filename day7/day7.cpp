@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <numeric>
+#include "../shared/Split.h"
 
 using namespace std;
 
@@ -12,15 +13,8 @@ int main()
     string s;
     getline(cin, s);
 
-    vector<int> crabs;
-    istringstream iss(s);
-    string n;
-    int mx = 0;
-    while (getline(iss, n, ',')) {
-        int c = stoi(n);
-        crabs.push_back(c);
-        mx = max(c, mx);
-    }
+    vector<int> crabs = SplitInt(s);
+    int mx = *max_element(crabs.begin(), crabs.end());
 
     int part1 = numeric_limits<int>::max();
     int part2 = numeric_limits<int>::max();

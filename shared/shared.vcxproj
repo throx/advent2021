@@ -155,6 +155,7 @@
     <ClInclude Include="Point.h" />
     <ClInclude Include="shared.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Split.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
