@@ -64,6 +64,7 @@ public:
 
 template<int N> Point<N> operator+ (const Point<N>& a, const Point<N>& b) { Point<N> p(a); p += b; return p; }
 template<int N> Point<N> operator- (const Point<N>& a, const Point<N>& b) { Point<N> p(a); p -= b; return p; }
+template<int N> Point<N> operator- (const Point<N>& a) { Point<N> p; p -= a; return p; }
 template<int N> Point<N> operator* (const Point<N>& a, int x) { Point<N> p(a); p *= x; return p; }
 template<int N> Point<N> operator/ (const Point<N>& a, int x) { Point<N> p(a); p /= x; return p; }
 template<int N> std::ostream& operator<< (std::ostream& os, const Point<N>& p)
@@ -123,4 +124,11 @@ namespace P2
             {'r', R},
         }
     );
+}
+
+namespace P3
+{
+    const Point3 X({ 1, 0, 0 });
+    const Point3 Y({ 0, 1, 0 });
+    const Point3 Z({ 0, 0, 1 });
 }
